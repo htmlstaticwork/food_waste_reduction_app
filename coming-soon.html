@@ -4,19 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - Food Waste Reduction</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <meta name="description" content="Something amazing is coming soon. Join our waitlist to get notified about our new food rescue feature.">
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
 
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container flex items-center justify-between">
+            <a href="index.html" class="nav-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                Food Waste
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="login.html" class="btn btn-outline nav-menu-btn">Login</a>
+                <a href="register.html" class="btn btn-primary nav-menu-btn">Signup</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn rtl-toggle" title="Toggle RTL" style="font-weight: 600; font-size: 14px;">
+                    RTL
+                </button>
+                <button class="icon-btn theme-toggle" title="Toggle Dark/Light Mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path class="theme-icon-path"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+
+                <button class="icon-btn mobile-toggle" id="mobile-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <!-- Coming Soon Hero -->
     <div style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2074&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 80px 24px;">
         <div class="container text-center" style="color: #fff; max-width: 640px;">
-            <a href="index.html" class="nav-brand mb-5" style="color: #fff; justify-content: center; font-size: 2rem; display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                Food Waste
-            </a>
 
             <h1 class="mb-3" style="color: #fff; font-size: 2.75rem; line-height: 1.2;">Something awesome is coming soon.</h1>
             <p class="mb-5" style="color: #cbd5e1; font-size: 1.25rem; line-height: 1.7;">We are launching a completely new feature to help you save more surplus food. Stay tuned!</p>
