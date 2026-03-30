@@ -1,6 +1,7 @@
 // main.js - Core functionality for all pages
 
-document.addEventListener('DOMContentLoaded', () => {
+const initScripts = () => {
+    console.log("FWRA: Scripts Initialized");
     // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -78,16 +79,69 @@ document.addEventListener('DOMContentLoaded', () => {
     const eyeIcons = document.querySelectorAll('.eye-icon');
     eyeIcons.forEach(eye => {
         eye.addEventListener('click', (e) => {
-            const input = e.target.previousElementSibling;
+            const btn = e.currentTarget;
+            const input = btn.previousElementSibling;
             if (input && input.type === 'password') {
                 input.type = 'text';
-                // Update SVG to eye-off
-                e.target.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
             } else if (input && input.type === 'text') {
                 input.type = 'password';
-                // Update SVG to eye
-                e.target.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
             }
         });
     });
-});
+    // 5. Back to Top Button
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'back-to-top-btn';
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.setAttribute('title', 'Go to top');
+    backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+    document.body.appendChild(backToTopBtn);
+
+    const handleScroll = () => {
+        const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollPos > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 6. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        if (header) {
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+};
+
+// Ensure scripts run even if DOMContentLoaded already fired
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScripts);
+} else {
+    initScripts();
+}

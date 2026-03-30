@@ -475,6 +475,7 @@ html.dark-mode .form-control:focus {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1 !important;
 }
 
 .card-title {
@@ -489,10 +490,31 @@ html.dark-mode .form-control:focus {
 
 .card-footer {
   margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  width: 100% !important;
 }
+
+.card-footer>span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px;
+}
+
+.card-footer .btn {
+  padding: 8px 16px !important;
+  font-size: 0.875rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
 
 .related-grid {
   display: grid;
@@ -1035,12 +1057,19 @@ html.dark-mode .stat-icon {
   .nav-menu.mobile-active {
     display: flex;
   }
+
+  .lg-flex-row {
+    flex-direction: row !important;
+  }
+
+  .lg-w-auto {
+    width: auto !important;
+  }
 }
 
 /* Tablet Layouts (768px - 1024px) */
 @media (max-width: 1024px) {
 
-  .grid-3,
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1066,11 +1095,17 @@ html.dark-mode .stat-icon {
 /* Tablet Only Specific Overrides */
 @media (min-width: 768px) and (max-width: 1024px) {
 
-  /* If there are exactly 3 cards, center the 3rd card to avoid it hanging left */
-  .grid-3>*:nth-child(3):last-child {
+  /* 2+1 layout for grids with 3 items on tablet (e.g. Pricing, Steps) */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Center the last item ONLY if it's an orphan (odd-numbered in a 2-col grid) */
+  .grid-3>*:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
-    width: calc(50% - 12px);
+    width: 100%;
+    max-width: 480px;
   }
 }
 
@@ -1216,10 +1251,17 @@ html.dark-mode .stat-icon {
 
   /* Perfect stacking - Everything turns into 1 column */
   .grid-2,
-  .grid-3,
   .grid-4,
-  .grid-4.featured {
-    grid-template-columns: 1fr;
+  .grid-4.featured,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix for mobile scroll resetting (jumping to top) on centered flex containers */
+  .auth-page {
+    align-items: flex-start !important;
+    padding-top: 40px !important;
+    scroll-behavior: auto !important;
   }
 
   .hero-content {
@@ -1280,7 +1322,6 @@ html.dark-mode .stat-icon {
 
   .features-content ul {
     width: 100%;
-    /* Max width helps keep the list items looking balanced instead of stretching fully */
     max-width: 400px;
     margin-inline: auto;
   }
@@ -1469,24 +1510,103 @@ html[dir="rtl"] .pricing-features li {
   opacity: 0.5;
 }
 
-/* FAQ Styling */
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+/* FAQ Accordion Styling */
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.faq-card {
-  padding: 32px;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius-lg);
+.faq-item {
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
-  height: 100%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-.faq-card h4 {
-  margin-bottom: 12px;
+.faq-item:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item.active {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.faq-header {
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-header h4 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+}
+
+.faq-item.active .faq-header h4 {
   color: var(--primary-color);
+}
+
+.faq-chevron {
+  color: var(--text-muted);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.faq-item.active .faq-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+}
+
+.faq-answer {
+  overflow: hidden;
+  padding: 0 32px 32px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Tablet Stacking */
+@media (max-width: 768px) {
+  .faq-header {
+    padding: 20px 24px;
+  }
+
+  .faq-answer {
+    padding: 0 24px 24px;
+  }
 }
 
 /* CTA Impact */
@@ -1517,12 +1637,7 @@ html[dir="rtl"] .pricing-features li {
   }
 }
 
-@media (min-width: 768px) {
-  .cta-impact .container p {
-    text-align: center !important;
-  }
-}
-}
+/* Removed redundant card-footer */
 
 @media (max-width: 768px) {
   .faq-grid {
@@ -1540,13 +1655,132 @@ html[dir="rtl"] .pricing-features li {
   }
 }
 
-.compare-table td:first-child {
-  width: 50%;
-}
+/* =========================================================================
+   13. SCROLL TO TOP BUTTON
+   ========================================================================= */
+.back-to-top {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 99999 !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(20px);
+  pointer-events: auto !important;
 }
 
-@media (min-width: 768px) {
-  .cta-impact .container p {
-    text-align: center !important;
+.back-to-top.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* RTL Support */
+html[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+@media (max-width: 767px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  html[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 20px;
+  }
+}
+
+/* =========================================================================
+   12. DASHBOARD CALENDAR REFINEMENTS
+   ========================================================================= */
+.calendar-card {
+  padding: 24px;
+  background: var(--surface-color);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  transition: var(--transition);
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-day-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 0;
+  color: var(--text-muted);
+}
+
+.calendar-day {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+}
+
+.calendar-day:hover:not(.active) {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.calendar-day.active {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .calendar-card {
+    padding: 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .calendar-days {
+    gap: 4px;
+  }
+
+  .calendar-day {
+    padding: 2px;
+    font-size: 0.8125rem;
+  }
+
+  .calendar-day-header {
+    padding: 4px 0;
+    font-size: 0.7rem;
   }
 }
