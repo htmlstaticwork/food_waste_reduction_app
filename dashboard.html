@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,25 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- Mobile Header (Visible only on mobile/tablet) -->
     <div class="mobile-dash-header flex">
         <div class="nav-brand">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
             Food Waste
         </div>
         <button class="icon-btn" id="dashboard-menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
     </div>
 
@@ -25,44 +35,87 @@
         <aside class="sidebar" id="dashboard-sidebar">
             <div class="sidebar-header">
                 <a href="index.html" class="nav-brand" style="font-size: 1.25rem;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    FW Panel
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    Food Waste
                 </a>
             </div>
 
             <nav class="sidebar-nav">
-                <a href="dashboard.html" class="sidebar-link active">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <a href="javascript:void(0)" class="sidebar-link active" id="nav-dashboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
                     Dashboard
                 </a>
-                <a href="#" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <a href="javascript:void(0)" class="sidebar-link" id="nav-rescues">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
                     My Rescues
                 </a>
-                <a href="#" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <a href="javascript:void(0)" class="sidebar-link" id="nav-calendar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
                     Calendar
                 </a>
-                <a href="#" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <a href="javascript:void(0)" class="sidebar-link" id="nav-impact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
                     Impact Stats
                 </a>
-                <a href="#" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <a href="javascript:void(0)" class="sidebar-link" id="nav-notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
                     Notifications
                 </a>
-                <a href="#" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <a href="javascript:void(0)" class="sidebar-link" id="nav-profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
                     Profile
                 </a>
 
                 <div class="mt-4" style="border-top: 1px solid var(--border-color); padding-top: 16px;">
-                    <button class="sidebar-link rtl-toggle" style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: start;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+                    <button class="sidebar-link rtl-toggle"
+                        style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: start;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18"></path>
+                        </svg>
                         Toggle RTL
                     </button>
-                    <button class="sidebar-link theme-toggle" style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: start;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path class="theme-icon-path" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <button class="sidebar-link theme-toggle"
+                        style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: start;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path class="theme-icon-path"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
                         Dark Mode
                     </button>
                 </div>
@@ -70,7 +123,12 @@
 
             <div class="sidebar-footer">
                 <a href="#" id="logout-btn" class="sidebar-link" style="color: #EF4444; margin: 0;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
                     Logout
                 </a>
             </div>
@@ -78,110 +136,472 @@
 
         <!-- Main Content Area -->
         <main class="dashboard-main">
-            <div class="dashboard-header text-start">
-                <div>
-                    <h1 style="font-size: 1.75rem;">Welcome back, Alex!</h1>
-                    <p class="text-muted">Here's your impact overview for this month.</p>
+            <!-- Dashboard Home Panel -->
+            <div id="content-dashboard" class="dashboard-content-panel active">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">Welcome back, Alex!</h1>
+                        <p class="text-muted">Here's your impact overview for this month.</p>
+                    </div>
+                    <button class="btn btn-primary flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Reserve New Box
+                    </button>
                 </div>
-                <button class="btn btn-primary flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    Reserve New Box
-                </button>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-4 text-center">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h4>Food Saved</h4>
+                            <p class="dynamic-stat" data-value="42">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h4>Money Saved</h4>
+                            <p class="dynamic-stat" data-prefix="$" data-value="658">$0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌱</div>
+                        <div class="stat-info">
+                            <h4>CO₂ Reduced</h4>
+                            <p class="dynamic-stat" data-value="105" data-suffix=" kg">0 kg</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h4>Orders Completed</h4>
+                            <p class="dynamic-stat" data-value="40">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid text-center">
+                    <!-- Activity Section -->
+                    <div class="dashboard-panel">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Recent Activity</h3>
+                            <a href="#" style="color: var(--primary-color); font-weight: 500; font-size: 0.875rem;">View
+                                All</a>
+                        </div>
+                        <ul class="activity-list">
+                            <li class="activity-item">
+                                <div class="icon-btn"
+                                    style="background: var(--primary-light); color: var(--primary-color); flex-shrink: 0; width: 48px; height: 48px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div style="flex-grow: 1;">
+                                    <h4 style="font-size: 1rem;">Whole Foods - Mystery Box</h4>
+                                    <span class="activity-time">Collected • $4.99 paid</span>
+                                </div>
+                                <div style="text-align: right; color: var(--primary-color); font-weight: 600;">
+                                    -$4.99
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="icon-btn"
+                                    style="background: var(--primary-light); color: var(--primary-color); flex-shrink: 0; width: 48px; height: 48px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div style="flex-grow: 1;">
+                                    <h4 style="font-size: 1rem;">Joe's Bakery - Pastry Bag</h4>
+                                    <span class="activity-time">Collected • $3.50 paid</span>
+                                </div>
+                                <div style="text-align: right; color: var(--primary-color); font-weight: 600;">
+                                    -$3.50
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="icon-btn"
+                                    style="background: var(--border-color); color: var(--text-main); flex-shrink: 0; width: 48px; height: 48px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    </svg>
+                                </div>
+                                <div style="flex-grow: 1;">
+                                    <h4 style="font-size: 1rem;">Reserved: Vegan Bites Bowl</h4>
+                                    <span class="activity-time">Pickup Today at 6:00 PM</span>
+                                </div>
+                                <div style="text-align: right; font-weight: 600;">
+                                    Pending
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Rescue Calendar Mini UI -->
+                    <div class="dashboard-panel">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Upcoming Rescues</h3>
+                        </div>
+                        <div
+                            style="background-color: var(--surface-color); padding: 16px; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color); text-align: center; display: flex; flex-direction: column; align-items: center;">
+                            <span style="font-weight: 600; font-size: 1.125rem;">Oct 15, 2025</span>
+                            <div style="margin: 16px 0; font-size: 2rem;">18:00</div>
+                            <p class="text-muted" style="margin-bottom: 16px;">Vegan Bites Bowl • 1.2 miles away</p>
+                            <button class="btn btn-outline" style="width: auto; padding: 8px 24px;">View Directions</button>
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600&auto=format&fit=crop"
+                                style="border-radius: var(--border-radius-md); width: 100%; height: 120px; object-fit: cover;"
+                                alt="Banner">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Stats Grid -->
-            <div class="grid grid-4 text-start">
-                <div class="stat-card">
-                    <div class="stat-icon">📦</div>
-                    <div class="stat-info">
-                        <h4>Food Saved</h4>
-                        <p class="dynamic-stat" data-value="42">0</p>
+            <!-- My Rescues Panel -->
+            <div id="content-rescues" class="dashboard-content-panel">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">My Rescues</h1>
+                        <p class="text-muted">Manage and track your food saving history.</p>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">💰</div>
-                    <div class="stat-info">
-                        <h4>Money Saved</h4>
-                        <p class="dynamic-stat" data-prefix="$" data-value="658">$0</p>
+                <div class="dashboard-panel text-center">
+                    <div class="dashboard-panel-header text-center">
+                        <h3 style="font-size: 1.25rem;">Rescue History</h3>
+                    </div>
+                    <div style="padding: 40px; text-align: center; border: 2px dashed var(--border-color); border-radius: var(--border-radius-lg);">
+                        <div style="font-size: 3rem; margin-bottom: 16px;">🥡</div>
+                        <h4>No active rescues found</h4>
+                        <p class="text-muted mb-4">Start saving food today by browsing nearby deals.</p>
+                        <button class="btn btn-primary">Browse Deals</button>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🌱</div>
-                    <div class="stat-info">
-                        <h4>CO₂ Reduced</h4>
-                        <p class="dynamic-stat" data-value="105" data-suffix=" kg">0 kg</p>
+
+                <div class="grid grid-2 text-center" style="margin-top: 24px;">
+                    <!-- New Section: Food Saved Categories -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Food Categories</h3>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 16px;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 8px;">🍞</div>
+                                <div style="font-size: 0.875rem; font-weight: 600;">Bakery</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 8px;">🥦</div>
+                                <div style="font-size: 0.875rem; font-weight: 600;">Produce</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 8px;">🍱</div>
+                                <div style="font-size: 0.875rem; font-weight: 600;">Meals</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">✅</div>
-                    <div class="stat-info">
-                        <h4>Orders Completed</h4>
-                        <p class="dynamic-stat" data-value="40">0</p>
+                    <!-- New Section: Top Impact Partners -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Top Partners</h3>
+                        </div>
+                        <ul class="activity-list" style="margin-top: 16px;">
+                            <li class="activity-item" style="justify-content: center; border-bottom: none; padding: 8px 0;">
+                                <span style="font-weight: 600;">Whole Foods</span>
+                                <span class="text-muted" style="margin-left: 12px;">(12 rescues)</span>
+                            </li>
+                            <li class="activity-item" style="justify-content: center; border-bottom: none; padding: 8px 0;">
+                                <span style="font-weight: 600;">Joe's Bakery</span>
+                                <span class="text-muted" style="margin-left: 12px;">(8 rescues)</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="dashboard-grid text-start">
-                <!-- Activity Section -->
-                <div class="dashboard-panel">
-                    <div class="dashboard-panel-header">
-                        <h3 style="font-size: 1.25rem;">Recent Activity</h3>
-                        <a href="#" style="color: var(--primary-color); font-weight: 500; font-size: 0.875rem;">View All</a>
+            <!-- Calendar Panel -->
+            <div id="content-calendar" class="dashboard-content-panel">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">Rescue Calendar</h1>
+                        <p class="text-muted">Schedule and manage your upcoming pickups.</p>
+                    </div>
+                </div>
+                <div class="dashboard-panel text-center">
+                    <div class="grid grid-2">
+                        <div style="padding: 24px; background: var(--surface-color); border-radius: var(--border-radius-md); border: 1px solid var(--border-color);">
+                            <h4 class="mb-3">October 2025</h4>
+                            <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center;">
+                                <div style="font-size: 0.75rem; font-weight: 600;">S</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">M</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">T</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">W</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">T</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">F</div>
+                                <div style="font-size: 0.75rem; font-weight: 600;">S</div>
+                                <div style="padding: 8px;">1</div><div style="padding: 8px;">2</div><div style="padding: 8px;">3</div><div style="padding: 8px;">4</div>
+                                <div style="padding: 8px;">5</div><div style="padding: 8px;">6</div><div style="padding: 8px;">7</div><div style="padding: 8px;">8</div>
+                                <div style="padding: 8px;">9</div><div style="padding: 8px;">10</div><div style="padding: 8px;">11</div><div style="padding: 8px;">12</div>
+                                <div style="padding: 8px;">13</div><div style="padding: 8px;">14</div><div style="padding: 8px; background: var(--primary-color); color: #fff; border-radius: 50%;">15</div>
+                            </div>
+                        </div>
+                        <div style="padding: 24px;">
+                            <h4 class="mb-3">Upcoming Event</h4>
+                            <div class="activity-item">
+                                <div style="width: 4px; height: 40px; background: var(--primary-color); border-radius: 2px;"></div>
+                                <div>
+                                    <h5 style="margin-bottom: 4px;">Vegan Bites Pickup</h5>
+                                    <p class="text-muted" style="font-size: 0.875rem;">Today at 6:00 PM • 1.2 miles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2 text-center" style="margin-top: 24px;">
+                    <!-- Recurring Subscriptions -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Recurring Pickups</h3>
+                        </div>
+                        <p class="text-muted" style="margin-bottom: 16px;">Automatic weekly slots reserved for you.</p>
+                        <div style="padding: 12px; background: var(--primary-light); border-radius: var(--border-radius-sm); border: 1px solid var(--primary-color); display: inline-block;">
+                            <strong style="color: var(--primary-color);">Every Monday @ 6:00 PM</strong>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Artisan Breads Co.</div>
+                        </div>
+                    </div>
+                    <!-- Community Events -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Local Meetups</h3>
+                        </div>
+                        <div style="text-align: center; margin-top: 16px;">
+                            <h5 style="margin-bottom: 4px;">Garden Surplus Swap</h5>
+                            <p class="text-muted" style="font-size: 0.875rem;">Oct 20 • Civic Center Park</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Stats Panel -->
+            <div id="content-impact" class="dashboard-content-panel">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">Your Impact Stats</h1>
+                        <p class="text-muted">Deep dive into your contribution to the environment.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="dashboard-panel text-center">
+                        <h4 class="mb-4">Monthly Contribution</h4>
+                        <div style="height: 200px; display: flex; align-items: flex-end; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
+                            <div style="flex: 1; height: 40%; background: var(--primary-light); border-radius: 4px;"></div>
+                            <div style="flex: 1; height: 60%; background: var(--primary-light); border-radius: 4px;"></div>
+                            <div style="flex: 1; height: 85%; background: var(--primary-color); border-radius: 4px;"></div>
+                            <div style="flex: 1; height: 45%; background: var(--primary-light); border-radius: 4px;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-top: 8px; color: var(--text-muted);">
+                            <span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-panel text-center">
+                        <h4 class="mb-4">Global Comparison</h4>
+                        <p class="text-muted mb-4">You have saved more food than 85% of users in your city this month!</p>
+                        <div style="width: 120px; height: 120px; border: 8px solid var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 24px auto; font-weight: 700; font-size: 1.5rem;">
+                            85%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2 text-center" style="margin-top: 24px;">
+                    <!-- Achievement Badges -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Earned Badges</h3>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 16px;">
+                            <div style="text-align: center;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #C0C0C0, #e8e8e8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 6px;">🥈</div>
+                                <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted);">Silver Savior</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #FFD700, #ffe94d); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 6px;">🌳</div>
+                                <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted);">Eco Warrior</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #CD7F32, #e8a96e); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 6px;">⭐</div>
+                                <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted);">First Rescue</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Eco Equivalence -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Eco Equivalence</h3>
+                        </div>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+                            <div style="font-size: 2.5rem;">🌲</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">x 12 Trees</div>
+                            <p class="text-muted" style="font-size: 0.875rem;">Your food savings equal planting 12 trees this month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications Panel -->
+            <div id="content-notifications" class="dashboard-content-panel">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">Notifications</h1>
+                        <p class="text-muted">Stay updated with latest deals and alerts.</p>
+                    </div>
+                </div>
+
+                <!-- Filter Bar -->
+                <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button style="padding: 6px 18px; border-radius: 20px; border: 1px solid var(--primary-color); background: var(--primary-color); color: #fff; font-size: 0.85rem; cursor: pointer; font-weight: 600;">All</button>
+                    <button style="padding: 6px 18px; border-radius: 20px; border: 1px solid var(--border-color); background: transparent; color: var(--text-main); font-size: 0.85rem; cursor: pointer;">Deals</button>
+                    <button style="padding: 6px 18px; border-radius: 20px; border: 1px solid var(--border-color); background: transparent; color: var(--text-main); font-size: 0.85rem; cursor: pointer;">Alerts</button>
+                    <button style="padding: 6px 18px; border-radius: 20px; border: 1px solid var(--border-color); background: transparent; color: var(--text-main); font-size: 0.85rem; cursor: pointer;">Reminders</button>
+                </div>
+
+                <div class="dashboard-panel text-center">
+                    <div style="text-align: right; margin-bottom: 12px;">
+                        <a href="#" style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600;">Mark all as read</a>
                     </div>
                     <ul class="activity-list">
                         <li class="activity-item">
-                            <div class="icon-btn" style="background: var(--primary-light); color: var(--primary-color); flex-shrink: 0; width: 48px; height: 48px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                            </div>
+                            <div class="icon-btn" style="background: var(--primary-light); color: var(--primary-color); flex-shrink: 0;">🔔</div>
                             <div style="flex-grow: 1;">
-                                <h4 style="font-size: 1rem;">Whole Foods - Mystery Box</h4>
-                                <span class="activity-time">Collected • $4.99 paid</span>
+                                <h4 style="font-size: 1rem;">New Deal Alert!</h4>
+                                <p class="text-muted" style="font-size: 0.875rem;">Fresh Donuts is offering 50% off right now.</p>
                             </div>
-                            <div style="text-align: right; color: var(--primary-color); font-weight: 600;">
-                                -$4.99
-                            </div>
+                            <span class="activity-time">2 mins ago</span>
                         </li>
                         <li class="activity-item">
-                            <div class="icon-btn" style="background: var(--primary-light); color: var(--primary-color); flex-shrink: 0; width: 48px; height: 48px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                            </div>
+                            <div class="icon-btn" style="background: var(--surface-hover); color: var(--text-muted); flex-shrink: 0;">💬</div>
                             <div style="flex-grow: 1;">
-                                <h4 style="font-size: 1rem;">Joe's Bakery - Pastry Bag</h4>
-                                <span class="activity-time">Collected • $3.50 paid</span>
+                                <h4 style="font-size: 1rem;">Pickup Reminder</h4>
+                                <p class="text-muted" style="font-size: 0.875rem;">Don't forget your rescue at Vegan Bites.</p>
                             </div>
-                            <div style="text-align: right; color: var(--primary-color); font-weight: 600;">
-                                -$3.50
-                            </div>
-                        </li>
-                        <li class="activity-item">
-                            <div class="icon-btn" style="background: var(--border-color); color: var(--text-main); flex-shrink: 0; width: 48px; height: 48px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect></svg>
-                            </div>
-                            <div style="flex-grow: 1;">
-                                <h4 style="font-size: 1rem;">Reserved: Vegan Bites Bowl</h4>
-                                <span class="activity-time">Pickup Today at 6:00 PM</span>
-                            </div>
-                            <div style="text-align: right; font-weight: 600;">
-                                Pending
-                            </div>
+                            <span class="activity-time">1 hour ago</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Rescue Calendar Mini UI -->
-                <div class="dashboard-panel">
-                    <div class="dashboard-panel-header">
-                        <h3 style="font-size: 1.25rem;">Upcoming Rescues</h3>
+                <div class="grid grid-2 text-center" style="margin-top: 24px;">
+                    <!-- Alert Preferences -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Alert Preferences</h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px; align-items: center;">
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                                <input type="checkbox" checked style="accent-color: var(--primary-color); width: 16px; height: 16px;"> Email Notifications
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                                <input type="checkbox" checked style="accent-color: var(--primary-color); width: 16px; height: 16px;"> SMS Alerts
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                                <input type="checkbox" style="accent-color: var(--primary-color); width: 16px; height: 16px;"> Push Notifications
+                            </label>
+                        </div>
                     </div>
-                    <div style="background-color: var(--surface-color); padding: 16px; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color); text-align: center;">
-                        <span style="font-weight: 600; font-size: 1.125rem;">Oct 15, 2025</span>
-                        <div style="margin: 16px 0; font-size: 2rem;">18:00</div>
-                        <p class="text-muted" style="margin-bottom: 16px;">Vegan Bites Bowl • 1.2 miles away</p>
-                        <button class="btn btn-outline" style="width: 100%; padding: 8px;">View Directions</button>
+                    <!-- Platform Updates -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Version News</h3>
+                        </div>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                            <span style="background: var(--primary-light); color: var(--primary-color); padding: 4px 14px; border-radius: 12px; font-size: 0.8rem; font-weight: 700;">v2.4.0 — Latest</span>
+                            <p class="text-muted" style="font-size: 0.875rem;">New community swap feature is now live!</p>
+                            <a href="#" style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600;">Read Changelog →</a>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <div style="margin-top: 24px;">
-                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600&auto=format&fit=crop" style="border-radius: var(--border-radius-md); width: 100%; height: 120px; object-fit: cover;" alt="Banner">
+            <!-- Profile Panel -->
+            <div id="content-profile" class="dashboard-content-panel">
+                <div class="dashboard-header text-center">
+                    <div>
+                        <h1 style="font-size: 1.75rem;">My Profile</h1>
+                        <p class="text-muted">Manage your personal information and preferences.</p>
+                    </div>
+                    <button class="btn btn-outline" style="padding: 8px 16px;">Edit Profile</button>
+                </div>
+
+                <div class="dashboard-panel text-center">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border-color);">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--primary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;">A</div>
+                        <div style="text-align: center;">
+                            <h2 style="font-size: 1.5rem;">Alex Johnson</h2>
+                            <p class="text-muted">alex.johnson@example.com</p>
+                        </div>
+                        <!-- Membership Badge -->
+                        <div style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #C0C0C0, #e0e0e0); padding: 5px 16px; border-radius: 20px;">
+                            <span style="font-size: 1rem;">🥈</span>
+                            <span style="font-weight: 700; font-size: 0.85rem; color: #555;">Silver Member</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-2 text-center">
+                        <div class="form-group">
+                            <label class="form-label" style="display: block;">Location</label>
+                            <input type="text" class="form-control text-center" value="San Francisco, CA" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" style="display: block;">Phone Number</label>
+                            <input type="text" class="form-control text-center" value="+1 (555) 000-0000" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2 text-center" style="margin-top: 24px;">
+                    <!-- Security & Access -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Security</h3>
+                        </div>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                            <button class="btn btn-outline" style="padding: 8px 16px; width: auto;">Change Password</button>
+                            <button class="btn btn-outline" style="padding: 8px 16px; width: auto; color: var(--primary-color); border-color: var(--primary-color);">Enable 2FA</button>
+                        </div>
+                    </div>
+                    <!-- Preferences -->
+                    <div class="dashboard-panel text-center">
+                        <div class="dashboard-panel-header text-center">
+                            <h3 style="font-size: 1.25rem;">Preferences</h3>
+                        </div>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 14px; align-items: center;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%;">
+                                <label class="form-label" style="display: block; font-size: 0.85rem;">Language</label>
+                                <select class="form-control text-center" style="max-width: 200px; cursor: pointer;">
+                                    <option>English (US)</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%;">
+                                <label class="form-label" style="display: block; font-size: 0.85rem;">Timezone</label>
+                                <select class="form-control text-center" style="max-width: 200px; cursor: pointer;">
+                                    <option>PST (UTC-8)</option>
+                                    <option>EST (UTC-5)</option>
+                                    <option>GMT (UTC+0)</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,4 +612,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>

@@ -24,7 +24,46 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', toggleSidebar);
     }
 
-    // 2. Simple Dynamic Stats Simulation
+    // 2. SPA Tab Switching Logic
+    const navLinks = document.querySelectorAll('.sidebar-link[id^="nav-"]');
+    const contentPanels = document.querySelectorAll('.dashboard-content-panel');
+
+    function switchTab(tabId) {
+        // 1. Hide all panels
+        contentPanels.forEach(panel => panel.classList.remove('active'));
+        
+        // 2. Show target panel
+        const targetPanel = document.getElementById(`content-${tabId}`);
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+        }
+
+        // 3. Update active link state
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.getElementById(`nav-${tabId}`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+
+        // 4. Close sidebar on mobile
+        if (window.innerWidth <= 1024) {
+            sidebar.classList.remove('active');
+            overlay.style.display = 'none';
+        }
+
+        // 5. Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabId = link.id.replace('nav-', '');
+            switchTab(tabId);
+        });
+    });
+
+    // 3. Simple Dynamic Stats Simulation
     const statsElements = document.querySelectorAll('.dynamic-stat');
     
     function animateValue(obj, start, end, duration, prefix = '', suffix = '') {
