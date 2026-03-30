@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Food Waste Reduction</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container flex items-center justify-between">
+            <a href="index.html" class="nav-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Food Waste
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn rtl-toggle" title="Toggle RTL" style="font-weight: 600; font-size: 14px;">
+                    RTL
+                </button>
+                <button class="icon-btn theme-toggle" title="Toggle Dark/Light Mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="theme-icon-path" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+                <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+                <button class="icon-btn mobile-toggle" id="mobile-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="section-padding" style="background-color: var(--surface-hover);">
+            <div class="container text-center">
+                <h1>Blog & News</h1>
+                <p class="text-muted mt-2 mx-auto" style="max-width: 600px; font-size: 1.125rem;">Insights, updates, and stories from the frontline of the food waste revolution.</p>
+            </div>
+        </section>
+
+        <!-- Blog Cards Grid (6 Cards) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Article 1 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1594968973184-9040a5a79963?q=80&w=1170&auto=format&fit=crop" class="card-img" alt="Blog 1">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">Environment</span>
+                            <h3 class="card-title text-start mt-2">The Hidden Carbon Cost of Food Waste</h3>
+                            <p class="card-text text-start">Understanding the impact that decomposing food has on our greenhouse gas emissions globally.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Oct 12, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 2 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1074&auto=format&fit=crop" class="card-img" alt="Blog 2">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">Community</span>
+                            <h3 class="card-title text-start mt-2">How Local Bakeries Are Saving Thousands</h3>
+                            <p class="card-text text-start">An inside look at three city bakeries recovering costs by partnering with our rescue app.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Oct 08, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 3 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1490818387583-1b0ba68bb932?q=80&w=1170&auto=format&fit=crop" class="card-img" alt="Blog 3">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">Tips</span>
+                            <h3 class="card-title text-start mt-2">5 Ways to Maximize Your Mystery Box</h3>
+                            <p class="card-text text-start">Expert consumers share their strategies for making a single haul last an entire week.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Sep 29, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 4 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1577563908411-5079b6a3100d?q=80&w=1170&auto=format&fit=crop" class="card-img" alt="Blog 4">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">News</span>
+                            <h3 class="card-title text-start mt-2">Expansion into 12 New Markets</h3>
+                            <p class="card-text text-start">We are officially launching in the Midwest, bringing the food revolution to more states.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Sep 15, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 5 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?q=80&w=1075&auto=format&fit=crop" class="card-img" alt="Blog 5">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">Education</span>
+                            <h3 class="card-title text-start mt-2">The Difference Between Use-By and Best-Before</h3>
+                            <p class="card-text text-start">Stop throwing away perfectly good vegetables by learning to read expiration labels properly.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Sep 02, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article 6 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 55%;">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1170&auto=format&fit=crop" class="card-img" alt="Blog 6">
+                        </div>
+                        <div class="card-body">
+                            <span class="section-tag" style="font-size: 0.75rem;">Recipes</span>
+                            <h3 class="card-title text-start mt-2">Making Soup from Surplus Stems</h3>
+                            <p class="card-text text-start">A viral recipe showing how to turn the "scraps" of broccoli into a Michelin-star comfort dish.</p>
+                            <div class="card-footer">
+                                <span class="text-muted" style="font-size: 0.875rem;">Aug 20, 2025</span>
+                                <a href="blog-details.html" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.875rem;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Reused Footer -->
+        <div class="container text-start">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="nav-brand mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        Food Waste
+                    </h3>
+                    <p class="text-muted mb-4">Empowering communities to fight food waste and save the planet.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading text-start">Quick Links</h4>
+                    <div class="footer-links text-start">
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">How It Works</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading text-start">Legal</h4>
+                    <div class="footer-links text-start">
+                        <a href="#">Privacy Policy</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading text-start">Newsletter</h4>
+                    <div class="flex" style="gap: 8px;">
+                        <input type="email" class="form-control" placeholder="Email...">
+                        <button class="btn btn-primary" style="padding: 12px; width: 48px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Food Waste Reduction App.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

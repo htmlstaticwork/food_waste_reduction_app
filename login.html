@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Food Waste Reduction</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-card">
+        <div class="auth-header">
+            <a href="index.html" class="nav-brand mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Food Waste
+            </a>
+            <h2 class="mb-1">Welcome back</h2>
+            <p class="text-muted">Enter your details to access your dashboard.</p>
+        </div>
+
+        <div class="social-logins">
+            <button class="btn btn-outline flex justify-center gap-2 items-center" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19.5v-1a4 4 0 0 0-4-4H4"></path><polyline points="8 10 4 14 8 18"></polyline><line x1="20" y1="4" x2="20" y2="4"></line><line x1="20" y1="8" x2="20" y2="8"></line><line x1="20" y1="12" x2="20" y2="12"></line><line x1="20" y1="16" x2="20" y2="16"></line></svg>
+                Google
+            </button>
+            <button class="btn btn-outline flex justify-center gap-2 items-center" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5h-2c0-3-1-4-2-5Z"></path></svg>
+                Apple
+            </button>
+        </div>
+
+        <div class="auth-divider">
+            <span>Or log in with email</span>
+        </div>
+
+        <form action="dashboard.html">
+            <div class="form-group">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            
+            <div class="form-group mb-4">
+                <label class="form-label">Password</label>
+                <div class="password-box">
+                    <input type="password" class="form-control" placeholder="••••••••" required>
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="auth-options">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="remember" style="accent-color: var(--primary-color);">
+                    <label for="remember" class="text-muted" style="cursor: pointer;">Remember me</label>
+                </div>
+                <a href="#" style="color: var(--primary-color); font-weight: 500;">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
+        </form>
+
+        <p class="text-center mt-4 text-muted" style="font-size: 0.875rem;">
+            Don't have an account? <a href="register.html" style="color: var(--primary-color); font-weight: 500;">Sign up</a>
+        </p>
+
+        <!-- Hidden toggles for functionality without displaying them inline -->
+        <div style="display:none;">
+            <button class="rtl-toggle"></button>
+            <button class="theme-toggle"></button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
