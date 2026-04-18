@@ -419,6 +419,12 @@ html.dark-mode .form-control:focus {
   background-color: var(--surface-color);
   color: var(--text-main);
   transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.icon-btn svg {
+  width: 20px !important;
+  height: 20px !important;
 }
 
 .icon-btn:hover {
@@ -1205,7 +1211,7 @@ html.dark-mode .stat-icon {
     display: block;
   }
 
-  .header .btn-primary {
+  .nav-actions .btn {
     display: none;
   }
 
@@ -1384,6 +1390,41 @@ html.dark-mode .stat-icon {
   .about-text,
   .about-text * {
     text-align: center !important;
+  }
+}
+
+/* Specific fix for small mobile devices (e.g. 320px) */
+@media (max-width: 400px) {
+  .nav-brand {
+    font-size: 1.15rem !important;
+    gap: 6px !important;
+  }
+
+  .nav-brand svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .nav-actions {
+    gap: 6px !important;
+  }
+
+  .icon-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .icon-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .rtl-toggle {
+    font-size: 12px !important;
+  }
+
+  .container {
+    padding-inline: 10px !important;
   }
 }
 
